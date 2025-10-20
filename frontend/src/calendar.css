@@ -1,0 +1,173 @@
+/* Card container to match the dark panel look */
+.calendar-card {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.04),
+    rgba(255, 255, 255, 0.02)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 18px 18px 12px;
+  width: 100%;
+  max-width: 1100px;
+  color: #eae6ff;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+}
+
+.calendar-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  color: #ffd23f;
+  margin-bottom: 10px;
+}
+.chev {
+  background: transparent;
+  color: #c9b06a;
+  border: none;
+  font-size: 1.4rem;
+  padding: 6px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.chev:hover {
+  background: rgba(255, 210, 63, 0.12);
+}
+
+.month-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+}
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: #ffd23f;
+  border-radius: 50%;
+}
+.dot.small {
+  width: 8px;
+  height: 8px;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 14px;
+}
+
+.dow {
+  color: #c9c9d6;
+  font-weight: 700;
+  padding: 8px 0;
+  text-align: left;
+}
+
+.day {
+  min-height: 122px;
+  border-radius: 14px;
+  padding: 10px;
+  background: radial-gradient(
+    130% 100% at 0% 0%,
+    rgba(255, 255, 255, 0.06) 0%,
+    rgba(255, 255, 255, 0.02) 60%,
+    rgba(255, 255, 255, 0.01) 100%
+  );
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.06);
+  color: #e6e6f0;
+}
+.day.filler {
+  opacity: 0.35;
+}
+
+.day.today {
+  outline: 2px solid #ddb13b;
+  box-shadow: 0 0 0 3px rgba(221, 177, 59, 0.25),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+
+.date-number {
+  font-weight: 800;
+  opacity: 0.9;
+  margin-bottom: 8px;
+}
+.events {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.event {
+  display: inline-block;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 0.9rem;
+  padding: 6px 8px;
+  border-radius: 8px;
+  color: #16161a;
+}
+.event.overdue {
+  background: #ef4444;
+  color: #fff;
+}
+.event[title]:hover {
+  filter: brightness(0.95);
+}
+.event.completed {
+  background: #4ade80;
+}
+.event.future {
+  background: #7c3aed;
+  color: #e9ddff;
+}
+.event.due-today {
+  background: #facc15;
+}
+.event.due-tomorrow {
+  background: #60a5fa;
+  color: #0b1220;
+}
+.event.more {
+  background: rgba(255, 255, 255, 0.12);
+  color: #ddd;
+}
+
+.legend {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.95rem;
+  color: #d6d6e3;
+  margin-top: 14px;
+}
+.legend .dot {
+  margin-right: 6px;
+}
+.legend .yellow {
+  background: #facc15;
+}
+.legend .blue {
+  background: #60a5fa;
+}
+.legend .red {
+  background: #ef4444;
+}
+.legend .green {
+  background: #4ade80;
+}
+.legend .purple {
+  background: #7c3aed;
+}
+
+.calendar-footer {
+  color: #bfbad0;
+  text-align: center;
+  margin-top: 8px;
+  font-size: 0.95rem;
+}

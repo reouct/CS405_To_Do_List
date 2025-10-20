@@ -1,7 +1,7 @@
 import React from "react";
 import "./header.css";
 
-function Header() {
+function Header({ active = "tasks", onNavigate = () => {} }) {
   const coins = 1250;
   const energy = { current: 7, max: 10 };
   const xp = { current: 3420, max: 5000 };
@@ -49,19 +49,28 @@ function Header() {
       <div className="header-divider" />
 
       <nav className="header-nav" aria-label="Primary">
-        <button className="nav-item active">
+        <button
+          className={"nav-item" + (active === "tasks" ? " active" : "")}
+          onClick={() => onNavigate("tasks")}
+        >
           <span className="icon" aria-hidden>
             ⚔️
           </span>
           <span>Tasks</span>
         </button>
-        <button className="nav-item">
+        <button
+          className={"nav-item" + (active === "calendar" ? " active" : "")}
+          onClick={() => onNavigate("calendar")}
+        >
           <span className="icon" aria-hidden>
             📅
           </span>
           <span>Calendar</span>
         </button>
-        <button className="nav-item">
+        <button
+          className={"nav-item" + (active === "game" ? " active" : "")}
+          onClick={() => onNavigate("game")}
+        >
           <span className="icon" aria-hidden>
             🎮
           </span>

@@ -1,0 +1,116 @@
+.game-card {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.04),
+    rgba(255, 255, 255, 0.02)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 24px 24px 18px;
+  width: 100%;
+  max-width: 720px;
+  color: #eae6ff;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+  text-align: center;
+}
+
+.dragon-art {
+  margin: 8px 0 12px;
+}
+.dragon-frame {
+  border: 3px solid #7a6530;
+  border-radius: 14px;
+  height: 280px;
+  display: grid;
+  place-items: center;
+  font-size: 5rem;
+  background: #110f14;
+  color: #b68cff;
+}
+
+.boss-name {
+  color: #f1d26b;
+  font-size: 2.4rem;
+  margin: 18px 0 6px;
+}
+.boss-sub {
+  color: #bcb5c7;
+  margin: 0 0 18px;
+  font-size: 1.2rem;
+}
+
+.hp-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.hp-label {
+  color: #ffb1b1;
+  font-weight: 700;
+}
+.hp-count {
+  color: #ff9a9a;
+  font-weight: 800;
+}
+
+.hp-bar {
+  height: 20px;
+  background: #3a1717;
+  border-radius: 999px;
+  overflow: hidden;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.6);
+}
+.hp-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #ff3434, #ff6a6a);
+}
+
+.game-actions {
+  margin-top: 18px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+.attack-btn {
+  background: #ef2b2b;
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 800;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 10px 24px rgba(239, 43, 43, 0.35);
+}
+.attack-btn:hover {
+  filter: brightness(1.05);
+}
+.attack-btn:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+.reset-btn {
+  background: transparent;
+  color: #eae6ff;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 10px 16px;
+  border-radius: 10px;
+}
+
+.ap-note {
+  color: #bcb5c7;
+  margin-top: 14px;
+}
+
+.combat-log {
+  list-style: none;
+  margin: 14px 0 0;
+  padding: 0;
+  color: #e6e6f0;
+  text-align: left;
+}
+.combat-log li {
+  opacity: 0.9;
+  padding: 4px 0;
+}
